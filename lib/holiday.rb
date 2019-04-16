@@ -1,19 +1,19 @@
-# require 'pry'
-# holiday_hash = {
-#   :winter => {
-#     :christmas => ["Lights", "Wreath"],
-#     :new_years => ["Party Hats"]
-#   },
-#   :summer => {
-#     :fourth_of_july => ["Fireworks", "BBQ"]
-#   },
-#   :fall => {
-#     :thanksgiving => ["Turkey"]
-#   },
-#   :spring => {
-#     :memorial_day => ["BBQ"]
-#   }
-# }
+require 'pry'
+holiday_hash = {
+  :winter => {
+    :christmas => ["Lights", "Wreath"],
+    :new_years => ["Party Hats"]
+  },
+  :summer => {
+    :fourth_of_july => ["Fireworks", "BBQ"]
+  },
+  :fall => {
+    :thanksgiving => ["Turkey"]
+  },
+  :spring => {
+    :memorial_day => ["BBQ"]
+  }
+}
 def second_supply_for_fourth_of_july(holiday_hash)
   holiday_hash[:summer][:fourth_of_july][1]
 end
@@ -35,6 +35,7 @@ end
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
   holiday_hash[season][holiday_name] = supply_array
   holiday_hash
+  binding.pry
 end
 
 def all_winter_holiday_supplies(holiday_hash)
